@@ -14,7 +14,7 @@ import StoreAuth from './pages/user/StoreAuth';
 
 function App() {
   return (
-    <Routes>
+    <Routes >
       <Route path="/" element={<StoreAuth />} />
       <Route path='/home' element={<MangaListPage />} />
       <Route path='/profile' element={<ProfilePage />} />
