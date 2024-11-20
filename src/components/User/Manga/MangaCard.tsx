@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Author, Manga } from "../../../constrants/type";
 import MangaTag from "./MangaTag";
 
@@ -22,11 +22,11 @@ export default function MangaCard({ item }: { item: Manga }) {
             {/* Info Layer */}
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-gray-900/75 to-transparent p-4">
                 <MangaTag status={item.status} />
-                <a>
+                <span>
                     <h5 className="text-md font-semibold tracking-tight text-white truncate">
                         {item.name}
                     </h5>
-                </a>
+                </span>
                 <div className="mt-2">
                     {item.author.map((author: Author, index) => (
                         <p className="text-sm font-normal text-gray-400 truncate" key={index}>

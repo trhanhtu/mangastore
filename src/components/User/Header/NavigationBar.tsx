@@ -1,13 +1,12 @@
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import apiHandler from "../../../apis/apiHandler";
 import { Genre } from "../../../constrants/type";
 import { ENDPOINTS } from "../../../constrants/webInfo";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
-import { getRoles } from "@testing-library/react";
+import SearchBar from "./SearchBar";
 
 export default function NavigationBar() {
 
@@ -49,11 +48,10 @@ export default function NavigationBar() {
 
     return (
         <div className="hidden lg:flex items-center gap-12">
-            <a className="font-medium hover:scale-[110%] hover:border-b-2" href="/home">Trang chủ</a>
+            <Link className="font-medium hover:scale-[110%] hover:border-b-2" to="/home">Trang chủ</Link>
             {/* Dropdown for genres */}
-            <a 
+            <span 
                 className="font-medium z-20 hover:scale-[110%] relative"
-                href="#"
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
             >
@@ -64,18 +62,18 @@ export default function NavigationBar() {
                         <ul className="z-10 py-2 text-lg">
                             {genres.map((genre) => (
                                 <li key={genre._id}>
-                                    <a 
-                                        href={`/genres/${genre._id}`} 
+                                    <Link 
+                                        to={`/genres/${genre._id}`} 
                                         className="block px-4 py-3 text-white hover:bg-gray-100 hover:text-slate-800 dark:hover:bg-gray-600 dark:hover:text-white"
                                     >
                                         {genre.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 )}
-            </a>
+            </span>
             <div className="flex items-stretch gap-4">
                 <SearchBar />
                 {userEmail && userAvatar ? (
@@ -95,20 +93,20 @@ export default function NavigationBar() {
                                 <div className="absolute top-[34px] z-10 bg-slate-800 divide-y divide-gray-100 rounded-lg shadow w-40 mt-2">
                                     <ul className="py-2 text-lg">
                                         <li>
-                                            <a 
-                                                href="/profile" 
+                                            <Link 
+                                                to="/profile" 
                                                 className="block px-4 py-2 text-white hover:bg-gray-100 hover:text-slate-800"
                                             >
                                                 Profile
-                                            </a>
+                                            </Link>
                                         </li>
                                         {localStorage.getItem("role")=="66f18ac5ab25c97ba8d69eff" &&(<li >
-                                            <a 
-                                                href="/admin" 
+                                            <Link 
+                                                to="/admin" 
                                                 className="block px-4 py-2 text-white hover:bg-gray-100 hover:text-slate-800"
                                             >
                                                 Quản lý 
-                                            </a>
+                                            </Link>
                                         </li>)}
                                         <li>
                                             <button 

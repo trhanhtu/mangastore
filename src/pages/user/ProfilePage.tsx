@@ -4,7 +4,7 @@ import apiHandler from "../../apis/apiHandler";
 import { ENDPOINTS } from "../../constrants/webInfo";
 import Loader from "../../components/User/Common/Loader";
 import { User, Manga, ReadingHistory, MangaFollowing } from "../../constrants/type";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface MangaReadingHistory {
     manga: Manga;
@@ -42,9 +42,9 @@ const MangaListTable = ({ readingHistory }: { readingHistory: MangaReadingHistor
                                 <ul className="list-disc">
                                     {chapters.map((chapter) => (
                                         <li key={chapter.title}>
-                                            <a href={`/manga/${manga._id}/read?chapterNum=1`} className="text-blue-400 hover:underline cursor-pointer">
+                                            <Link to={`/manga/${manga._id}/read?chapterNum=1`} className="text-blue-400 hover:underline cursor-pointer">
                                                 {chapter.title} <span className="text-xs text-gray-400">(Đã đọc)</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -85,9 +85,9 @@ const FollowedMangaTable = ({ followedManga }: FollowedMangaProps) => {
                                 </td>
                                 <td className="py-4 px-4 font-semibold">{manga.mangaName}</td>
                                 <td className="py-4 px-4 text-blue-400 hover:underline cursor-pointer">
-                                    <a href={`/manga/${manga._id}`}>
+                                    <Link to={`/manga/${manga._id}`}>
                                         {manga.latestChapterTitle}
-                                    </a>
+                                    </Link>
                                 </td>
                                 <td className="py-4 px-4 text-gray-400">
                                     {new Date(manga.latestChapterCreatedAt).toLocaleDateString()}
@@ -156,13 +156,13 @@ export default function ProfilePage() {
                 ) : (
                     <div className="flex flex-col items-center p-8 min-h-screen">
                         <h1 className="text-3xl font-bold mb-6">Thông tin tài khoản</h1>
-                        
+
                         {/* Profile Card */}
                         <div className="rounded-lg shadow-lg p-8 w-full max-w-sm text-center mb-8 bg-gray-900">
                             {userAvatar && (
-                                <img 
-                                    src={userAvatar} 
-                                    alt="User Avatar" 
+                                <img
+                                    src={userAvatar}
+                                    alt="User Avatar"
                                     className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 shadow-md"
                                 />
                             )}

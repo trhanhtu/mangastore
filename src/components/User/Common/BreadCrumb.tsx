@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
 // Interface cho các item của breadcrumb, có thêm prop `icon`
 interface BreadCrumbItem {
@@ -20,14 +21,14 @@ export default function BreadCrumb({ items }: BreadCrumbProps) {
                     {items.map((item, index) => (
                         <li key={index} className="inline-flex items-center">
                             <div className="flex items-center">
-                                <a href={item.href} className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-white dark:text-gray-400 dark:hover:text-white">
+                                <Link to={item.href} className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-white dark:text-gray-400 dark:hover:text-white">
                                     {item.icon && (
                                         <span className="me-2.5 text-white"> {/* Thêm màu cho icon */}
                                             {item.icon}
                                         </span>
                                     )}
                                     {item.label}
-                                </a>
+                                </Link>
                                 {index !== items.length - 1 && (
                                     <svg className="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
