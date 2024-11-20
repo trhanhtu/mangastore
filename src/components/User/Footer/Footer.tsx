@@ -6,7 +6,7 @@ export default function Footer() {
                 Khám phá các thể loại yêu thích và tìm kiếm những câu chuyện mới mỗi ngày!
             </p>
             <div className="mt-4">
-                <a href="/" className="text-blue-400 hover:text-blue-300">Trang chủ</a> | 
+                <a href="/home" className="text-blue-400 hover:text-blue-300">Trang chủ</a> | 
                 <a href="/policy" className="text-blue-400 hover:text-blue-300"> Giới thiệu</a> | 
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=MangaStore@gmail.com&su=Xin%20chào%20website%20truyện%20tranh.%20Tôi%20cần%20liên%20hệ%20với%20bạn" target="_blank" className="text-blue-400 hover:text-blue-300"> Liên hệ</a>
             </div>
