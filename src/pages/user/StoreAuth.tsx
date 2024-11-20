@@ -10,7 +10,7 @@ const StoreAuth = () => {
 
     useEffect(() => {
         // Get the query parameters from the URL
-        const queryParams = new URLSearchParams(window.location.search);
+        const queryParams = new URLSearchParams(window.location.hash.split('?')[1]);
         const userParam = queryParams.get("user");
         const tokenParam = queryParams.get("token");
 
