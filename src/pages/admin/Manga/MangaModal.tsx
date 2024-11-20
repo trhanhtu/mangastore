@@ -1,8 +1,8 @@
-import React, { ChangeEvent, useState, useEffect } from 'react';
-import { DTOManga, GenrePair, SelectedManga } from '../../../constrants/apiResponse';
 import { motion } from 'framer-motion';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import GenreApi from '../../../apis/GenreApi';
 import MangaApi from '../../../apis/MangaApi';
+import { GenrePair, SelectedManga } from '../../../constrants/apiResponse';
 
 interface MangaModalProps {
     isOpen: boolean;

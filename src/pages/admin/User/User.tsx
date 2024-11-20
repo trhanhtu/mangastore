@@ -1,21 +1,8 @@
-import React, { useState, ChangeEvent, useEffect } from 'react';
-import Pagination from '../../../components/Admin/Pagination/Pagination';
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import ApiService from '../../../apis/apiService';
-import { Base, User, UserDTO } from '../../../constrants/apiResponse';
-
-const emptyData: UserDTO = {
-  _id: '',
-  userName: '',
-  email: '',
-  password: '',
-  isDeleted: false,
-  account_type: '',
-  reading_history: [],
-  role: '',
-  createdAt: '',
-  updatedAt: ''
-};
+import Pagination from '../../../components/Admin/Pagination/Pagination';
+import { Base, User } from '../../../constrants/apiResponse';
 
 const userService = new ApiService<Base<User[]>>('users');
 

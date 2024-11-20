@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion'
-import React from 'react'
-import Activity from '../../../components/Admin/Activity/Activity'
 import Card from '../../../components/Admin/Cards/Card'
 import CustomBarChart from '../../../components/Admin/Charts/CustomBarChart'
-import CustomPieChart from '../../../components/Admin/Charts/CustomPieChart'
 import Table from '../../../components/Admin/Table/Table'
 
 const containerVariants = {

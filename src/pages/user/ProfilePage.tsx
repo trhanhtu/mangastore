@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import DefaultLayoutUser from "../../layouts/DefaultLayoutUser/DefaultLayoutUser";
+import { Link } from "react-router-dom";
 import apiHandler from "../../apis/apiHandler";
-import { ENDPOINTS } from "../../constrants/webInfo";
 import Loader from "../../components/User/Common/Loader";
-import { User, Manga, ReadingHistory, MangaFollowing } from "../../constrants/type";
-import { Link, useNavigate } from "react-router-dom";
+import { Manga, MangaFollowing, ReadingHistory, User } from "../../constrants/type";
+import { ENDPOINTS } from "../../constrants/webInfo";
+import DefaultLayoutUser from "../../layouts/DefaultLayoutUser/DefaultLayoutUser";
 
 interface MangaReadingHistory {
     manga: Manga;

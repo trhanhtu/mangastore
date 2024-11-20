@@ -1,20 +1,6 @@
 import { useEffect, useState } from "react";
-import { UpdateMangaData, DTOManga, Genre, DTOMangaCreate, GenrePair, SelectedManga } from "../../../constrants/apiResponse";
-import GenreApi from "../../../apis/GenreApi";
-import { current } from "@reduxjs/toolkit";
 import MangaApi from "../../../apis/MangaApi";
-
-
-const emptyUpdateData: UpdateMangaData = {
-    _id: '',
-    updatedData: {
-        name: "",
-        summary: "",
-        imageUrl: "",
-        isDeleted: false,
-        genres: []
-    }
-};
+import { DTOManga, SelectedManga } from "../../../constrants/apiResponse";
 
 const mangaData: SelectedManga = {
     _id: '',

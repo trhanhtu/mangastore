@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
-import { MangaTableProps } from "../../../constrants/type"
-import Pagination from "../../../components/Admin/Pagination/Pagination"
+import React, { useState } from "react";
 import MangaApi from "../../../apis/MangaApi";
+import Pagination from "../../../components/Admin/Pagination/Pagination";
 import { DTOManga, SelectedManga } from "../../../constrants/apiResponse";
-import { useManga } from './MangaHook';
+import { MangaTableProps } from "../../../constrants/type";
+
 
 
 export const MangaAdminTable: React.FC<MangaTableProps & {  fetchManga: (page: number) => Promise<void>

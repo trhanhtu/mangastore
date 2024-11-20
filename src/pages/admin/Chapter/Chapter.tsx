@@ -1,9 +1,9 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import Pagination from '../../../components/Admin/Pagination/Pagination';
 import { motion } from 'framer-motion';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Chapter, ChapterData } from '../../../constrants/apiResponse';
 import ChapterApi from "../../../apis/ChapterApi";
+import Pagination from '../../../components/Admin/Pagination/Pagination';
+import { Chapter } from '../../../constrants/apiResponse';
 
 const emptyData: Chapter = {
   _id: '',
