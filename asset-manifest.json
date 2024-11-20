@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mangastore/static/css/main.c8461aa5.css",
-    "main.js": "/mangastore/static/js/main.d8a4a6a6.js",
+    "main.js": "/mangastore/static/js/main.7c6e5c95.js",
     "static/js/453.5242fa5e.chunk.js": "/mangastore/static/js/453.5242fa5e.chunk.js",
     "static/media/background.jpg": "/mangastore/static/media/background.61206e7a291b437595f8.jpg",
     "index.html": "/mangastore/index.html",
     "main.c8461aa5.css.map": "/mangastore/static/css/main.c8461aa5.css.map",
-    "main.d8a4a6a6.js.map": "/mangastore/static/js/main.d8a4a6a6.js.map",
+    "main.7c6e5c95.js.map": "/mangastore/static/js/main.7c6e5c95.js.map",
     "453.5242fa5e.chunk.js.map": "/mangastore/static/js/453.5242fa5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8461aa5.css",
-    "static/js/main.d8a4a6a6.js"
+    "static/js/main.7c6e5c95.js"
   ]
 }
