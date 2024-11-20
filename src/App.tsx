@@ -1,6 +1,6 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { 
+import {
   HomeAdminPage,
   LoginPage,
   MangaDetailPage,
@@ -9,8 +9,8 @@ import {
   NotificationPage,
   ProfilePage,
 } from './pages/index';
-import StoreAuth from './pages/user/StoreAuth';
 import PolicyPage from './pages/user/PolicyPage';
+import StoreAuth from './pages/user/StoreAuth';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <Route path='/notification' element={<NotificationPage />} />
       <Route path='/policy' element={<PolicyPage />} />
       <Route path='/admin/*' element={<HomeAdminPage />} />
-      
+
       <Route path='/login' element={<LoginPage />} />
       {/* Thêm một trang 404 */}
       <Route path='*' element={<h1>404 - Page Not Found</h1>} />
