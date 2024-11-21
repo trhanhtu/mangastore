@@ -100,7 +100,7 @@ const MangaDetailPage = () => {
     }
     
     const breadCrumbItems = [
-        { label: 'Trang chủ', href: '/', icon: <i className="fa-solid fa-house"></i> },
+        { label: 'Trang chủ', href: '/home', icon: <i className="fa-solid fa-house"></i> },
         { label: manga ? manga.name : '', href: `/manga/${manga?._id}`, icon: <i className="fa-solid fa-book-open-reader"></i>},
     ];
 
@@ -166,7 +166,7 @@ const MangaDetailPage = () => {
                                     <p className="font-bold mb-4">Thể loại:</p>
                                     <div className="flex mb-4 gap-3 flex-wrap w-full">
                                         {manga?.genres.map((genre) => (
-                                            <span key={genre.name} className="mb-2 p-2 bg-blue-500 font-bold text-white rounded-md cursor-pointer" onClick={() => nav(`/genres/${genre._id}`)}>
+                                            <span key={genre.name} className="mb-2 p-2 bg-blue-500 font-bold text-white rounded-md cursor-pointer" onClick={() => nav(`/home?genre=${genre._id}`)}>
                                                 {genre.name}
                                             </span>
                                         ))}

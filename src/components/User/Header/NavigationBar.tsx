@@ -63,7 +63,7 @@ export default function NavigationBar() {
                             {genres.map((genre) => (
                                 <li key={genre._id}>
                                     <Link 
-                                        to={`/genres/${genre._id}`} 
+                                        to={`/home?genre=${genre._id}`} 
                                         className="block px-4 py-3 text-white hover:bg-gray-100 hover:text-slate-800 dark:hover:bg-gray-600 dark:hover:text-white"
                                     >
                                         {genre.name}
